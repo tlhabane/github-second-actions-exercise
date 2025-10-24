@@ -1,11 +1,9 @@
-name: Echo issues and context
-on: [push, workflow_dispatch]
+name: Echo issues
+on: issues
 
 jobs:
-  issues:
+  echo-issues:
     runs-on: ubuntu-latest
     steps:
-      - name: Echo repo issue
+      - name: Echo repo issues
         run: echo "${{ toJSON(github.issues) }}"
-      - name: Echo Github context
-        run: echo "${{ toJSON(github) }}"
