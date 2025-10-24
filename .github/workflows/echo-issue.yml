@@ -1,4 +1,4 @@
-name: echo-issue.yml
+name: Echo issues and context
 on: [push, workflow_dispatch]
 
 jobs:
@@ -6,6 +6,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Echo repo issue
-        run: echo "${{ toJSON(issue) }}"
+        run: echo "${{ toJSON(issues) }}"
       - name: Echo Github context
         run: echo "${{ toJSON(github) }}"
